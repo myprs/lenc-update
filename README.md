@@ -42,7 +42,7 @@ The following tools have to be installed:
 1. Make sure the prerequisites above are met or be prepared to change the defaults more aggressively.
 1. Put the file `lenc-update` in your `/usr/local/sbin` directory and make it executable for user root.
 1. If you want to change the defaults in the script and want to keep your setting separate (e.g. to not overwriting the settings when updating the script)  create a file `/etc/default/lenc-update`, preferably copied from the supplied ```lenc-update.conf```file . All global variables can be overridden here. You might also use the alternate location in ```/etc/letsencrypt/```. The most interesting variales are:
- 1. `LENC_AUTOBINARY`: Path and name of the ```letsencrypt``` binary. 
+ 1. `LENC_AUTOBINARY`: Path and name of the ```letsencrypt-auto``` binary. 
  1. `MIN_VALDAYS`: Minimum number of days a certificate is valid until we start trying to renew the signature. Defaults to 14 days.
  1. `LENC_CONFDIR`: Basedir where the letsencrypt configuration lives. Default is "/etc/letsencrypt"
  1. `LENC_CONFFILE_SFX`: file suffix, indicating that this is a letsencrypt certificate definition. Defaults to ".ini"
@@ -92,7 +92,7 @@ webroot-path = /var/www/namedinstance/webroot/
 domain example.mypersonalrocketscience.de
 
 # make renewal noninteractive
-renew-by-default = True
+renew-by-default
 
 ```
 
